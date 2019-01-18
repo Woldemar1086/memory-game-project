@@ -1,0 +1,237 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff url('../img/geometry2.png');
+    /* Background pattern from Subtle Patterns */
+    font-family: 'Coda', cursive;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+    width: 660px;
+    min-height: 680px;
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+}
+
+.deck .card {
+    height: 125px;
+    width: 125px;
+    background: #2e3d49;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+    transition: all 0.3s ease-out;
+    -webkit-transition-duration: 0.3s;
+    -webkit-perspective: 125px;
+    -moz-perspective: 125px;
+    -ms-perspective: 125px;
+    -o-perspective: 125px;
+    perspective: 125px;
+}
+
+.deck .card.open {
+    transform: rotateY(180deg);
+    background: #02b3e4;
+    cursor: default;
+}
+
+.deck .card.show {
+    font-size: 33px;
+    transition: all 0.3s ease-out;
+}
+
+.deck .card.match {
+    cursor: default;
+    background: #02ccba;
+    font-size: 33px;
+    transform: rotateY(180deg);
+}
+
+/*
+ * Styles for the Score Panel
+ */
+
+.score-panel {
+    text-align: left;
+    width: 400px;
+    margin-bottom: 10px;
+}
+
+.score-panel .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+}
+
+.score-panel .restart {
+    float: right;
+    cursor: pointer;
+}
+
+.score-panel .timePass {
+    margin-left: 30px;
+}
+
+
+/* Result modal window */
+
+.modalBox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    transition: all 0.3s ease-out
+}
+
+.modalBox__active {
+    display: flex;
+}
+
+.resultModalWindow {
+    border: 10px solid #02ccba;
+    border-radius: 50px;
+    height: 50%;
+    width: 50%;
+    min-height: 350px;
+    min-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+}
+.modalBox > * {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+.resultRestart {
+    width: 400px;
+}
+
+.resultRestart span {
+    margin-left: 10px;
+}
+
+.resultRestart .closeModal {
+    float: right;
+    cursor: pointer;
+}
+
+.resultRestart .fa-repeat {
+    cursor: pointer;
+}
+
+
+/* Media query view port */
+
+@media screen and (max-width: 700px) {
+    .deck .card {
+        width: 21%;
+        margin: 5px;
+    }
+
+    .score-panel {
+        width: 80%;
+    }
+
+    .deck {
+        width: 100%;
+        min-height: 300px;
+    }
+
+    .resultRestart {
+        width: 80%;
+        padding-top: 30px;
+    }
+
+    .resultModalWindow {
+        height: 50%;
+        width: 100%;
+        min-height: 100px;
+        min-width: 100px;
+    }
+}
+
+
+@media screen and (max-width: 610px) {
+    .deck .card {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 535px) {
+    .deck .card {
+        height: 85px;
+        width: 85px;
+    }
+}
+
+@media screen and (max-width: 445px) {
+    .deck .card {
+        height: 67px;
+        width: 67px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .deck .card {
+        height: 53px;
+        width: 53px;
+    }
+}
