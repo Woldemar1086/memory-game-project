@@ -4,6 +4,10 @@ Hi for everyone.
 
 This is my project for Udacity Frontend Web develope Nanodegree Programm.
 
+## How to open the game
+
+Just open `index.html` in your browser
+
 ## How to play a game.
 
 To win, you should find for every card a twin. The another card with the same image.
