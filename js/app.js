@@ -289,6 +289,7 @@
         openedCard1 = false;
         openedCard2 = false;
         stepCounter = 0;
+        cardCounter = 0;
 
         if (gameInProcess === true) {
             gameEnd(false);
