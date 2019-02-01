@@ -339,7 +339,7 @@
             if (time < gameMaxDuration) {
                 time += 1;
                 getElements('.score-panel .timePass')[0].textContent = time;
-                console.log(time);
+                // console.log(time);
             } else {
                 gameEnd(true);
             }
@@ -352,7 +352,7 @@
      */
     function gameMain(event) {
         let targetElement = event.target;
-        debugger
+
         if (targetElement.className.indexOf('repeat') > -1) {
             resetGame();
         }
