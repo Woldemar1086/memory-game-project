@@ -4,6 +4,11 @@ Hi for everyone.
 
 This is my project for Udacity Frontend Web develope Nanodegree Programm.
 
+## Important requirements
+
+This project uses [Google fonts](https://fonts.google.com/) for texts and 
+[Font awesome](https://origin.fontawesome.com/) for card images. Please, be sure that you have an Internet connection. 
+
 ## How to open the game
 
 Just open `index.html` in your browser
